@@ -201,6 +201,10 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.7px;
 }
+#toggle,
+.hamburger {
+  display: none;
+}
 
 /* section hero */
 
@@ -466,14 +470,39 @@ p {
   .flex p {
     font-size: 14px;
   }
-  .hello-icon {
-    text-align: center;
-    display: inline-block;
-  }
-  .hello-right {
-    text-align: center;
-  }
   .footer {
     padding: 44px 0;
+  }
+  #toggle:checked ~ .nav {
+    display: block;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+  }
+  .hamburger {
+    padding-right: 24px;
+    font-size: 28px;
+    color: #010101;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+  }
+  .nav li {
+    display: block;
+    text-align: center;
+  }
+  .navigation {
+    background: #ffffff;
+  }
+  .hello .btn {
+    padding: 14px 50px;
   }
 }
